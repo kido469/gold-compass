@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>ゴールド羅針盤</title>
+<style>body{margin:0;background:#0b0b0d;color:#f1ece2;font-family:sans-serif;display:grid;place-items:center;min-height:100vh;padding:16px;text-align:center}a{color:#d4ad5b}</style>
+<script>
+// ゴールド羅針盤は入口サーバーに引っ越しました。専用リンク（?k=）か、前にこの場所で開いたときの鍵を持って移ります。
+(function () {
+  var G = 'https://gold-compass-gate.kido-gold.workers.dev/';
+  var k = new URLSearchParams(location.search).get('k');
+  try { k = k || localStorage.getItem('gc_k'); } catch (e) {}
+  location.replace(k ? G + '?k=' + encodeURIComponent(k) : G);
+})();
+</script></head>
+<body><p>ゴールド羅針盤を開いています…<br><a href="https://gold-compass-gate.kido-gold.workers.dev/">開かないときはこちら</a></p></body></html>
